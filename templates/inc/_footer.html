@@ -1,0 +1,19 @@
+{% load static %}
+<footer class="footer mt-auto footer-area section-gap">
+    <div class="container">
+        <div class="row border-top">
+            <div class="col-sm-4 d-flex align-items-stretch p-3 footer-social">
+                <a title="Share on Facebook" class="customer share" href="http://www.facebook.com/sharer.php?u={{ request.build_absolute_uri }}"><i class="fab fa-facebook fa-fw fa-2x"></i></a>
+                <a title="Share on Linkedin" class="customer share" href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title="><i class="fab fa-linkedin-in fa-fw fa-2x"></i></a>
+                <a title="Share on WhatsApp" class="customer share" href="https://api.whatsapp.com/send?text={{ request.build_absolute_uri }}"><strong><i class="fab fa-whatsapp fa-fw fa-2x"></i></strong></a>
+                <div class="fb-like mt-2" data-href="" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
+            </div>
+
+            <div class="col-sm-8 mt-2 mt-sm-0 mt-lg-0 d-flex align-items-stretch p-3">
+                <small class="mt-1">Created by <a href="https://craftingdev.com">Craftingdev.com</a><span> | {% now "Y" %} all rights reserved</span>
+                    <a class="red" href="{{ request.scheme }}://{{ request.get_host }}">{{ request.get_host }}</a><i class="far fa-copyright fa-fw"></i></small>
+            </div>
+
+        </div>
+    </div>
+</footer>

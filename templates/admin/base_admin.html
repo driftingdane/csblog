@@ -1,0 +1,25 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block title %}{{ title }} | {{ site_title|default:_('Knaldperlen udtrykker') }}{% endblock %}
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "css/admin-extra.css" %}" />{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Knaldperlen Admin') }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+
+<!--{% extends "admin/base.html" %}-->
+<!--{% load static %}-->
+
+<!--{% block branding %}-->
+<!--<h1 id="head">-->
+<!--   <img src="{% static "img/logo.png" %}" alt="logo"-->
+<!--        width="100" class="navbar-brand"> AdminDashboard-->
+<!--</h1>-->
+
+<!--{% endblock %}-->
+<!--{% block extrastyle %}-->
+<!--<link rel="stylesheet" href="{% static "css/admin.css" %}">-->
+<!--{% endblock %}-->

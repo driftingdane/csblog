@@ -1,0 +1,39 @@
+$banner-background: rgba(255,255,255,0);
+$banner-repeat: no-repeat;
+$banner-position-top: center top;
+$banner-position-bottom: center bottom;
+$banner-webkit-background-size: cover;
+$banner-moz-background-size: cover;
+$banner-o-background-size: cover;
+$banner-background-size: cover;
+
+/// Set text color based on background
+@function set-text-color($color) {
+  @if (lightness($color)> 70) {
+    @return #222;
+       } @else {
+    @return #EEE;
+  }
+}
+
+/// Set background and text color
+@mixin set-background() {
+  color: $color;
+  color: set-text-color($color);
+}
+
+// margin and padding classes
+@each $space in space {
+  .m-#{$space}{
+    margin: #{$space}rem;
+  }  .my-#{$space}{
+    margin: #{$space}rem 0;
+  }  .p-#{$space}{
+    padding: #{$space}rem;
+  }  .py-#{$space}{
+    padding: #{$space}rem 0;
+  }
+}
+
+
+
