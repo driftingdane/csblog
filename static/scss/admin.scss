@@ -1,0 +1,46 @@
+/*Single property */
+html {
+  font-size: 1.000em; }
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(0.3824091778vw + 0.924em); } }
+@media screen and (min-width: 1366px) {
+  html {
+    font-size: 1.188em; } }
+
+@media screen and (max-width: 1366px) {
+  .tag-label, .tag-experience > span, .tag-label a  {
+    font-size: 0.850rem!important; } }
+
+/* Multiple properties with same values */
+h1, h2, h3, h4, h5 {
+  padding-top: 0rem;
+  padding-bottom: 0rem;}
+@media screen and (min-width: 20rem) {
+  h1, h2, h3, h4, h5 {
+    padding-top: calc(1vw - 0.2rem);
+    padding-bottom: calc(1vw - 0.2rem); } }
+@media screen and (min-width: 70rem) {
+  h1, h2, h3, h4, h5 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; } }
+
+
+
+.table th, .table td {
+  border-top:none!important;
+  border: 1px solid #607D8B;
+  vertical-align: middle!important;
+
+}
+
+table th {
+  background: #265485;
+  color: #fff;
+  font-size: 0.750em;}
+table tbody th {font-weight: 400;}
+table th.last {
+  border-right: none; }
+
+
+

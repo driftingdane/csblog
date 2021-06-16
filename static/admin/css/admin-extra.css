@@ -1,0 +1,33 @@
+#header {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: #499cee;
+    color: #ffc;
+    overflow: hidden;
+}
+
+#branding h1, #branding h1 a:link, #branding h1 a:visited {
+    color: #ffffff;
+}
+
+#header a, #branding a {
+
+    color: #eeeeee;
+}
+
+a:hover {
+
+    color: #8baad8;
+}
+
+.field-copy_url, .field-title, .field-author, .field-slug, .field-status, .field-category {
+    vertical-align: middle!important;
+}
+
+#result_list > tbody > tr:nth-child(1) > td.field-thumbnail_preview {
+    width: 200px;
+}

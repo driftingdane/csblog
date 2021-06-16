@@ -1,0 +1,29 @@
+.shape {
+  position: absolute;
+  width: 150px;
+  top: .5rem;
+  left: .5rem;
+}
+
+.card {
+  /*width: 400px;*/
+  /*height: auto;*/
+  /*padding: 2rem;*/
+  background: rgba(255, 255, 255, .7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+}
+
+.userAvatar-img {
+    border-radius: 50%;
+    color: rgb(229 239 247);
+    border-style: solid;
+    border-width: 2px;
+}
+
+.userAvatar-white {
+    padding: 10px;
+    background: #FFF;
+    margin-bottom: 1em;
+}

@@ -1,0 +1,114 @@
+body, html {
+    font-family: 'Merriweather', serif;
+}
+
+
+video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+}
+
+/* 22. social
+--------------------------------------------------------------------------------*/
+
+.social-01 {
+    text-align: center;
+}
+
+.social-01__title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #1c1c1c;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.social-01__navSocial {
+    overflow: hidden;
+}
+
+.social-01__item {
+    color: #c2c2c2;
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+    transition: all ease .3s;
+}
+
+.social-01__style-02 .social-01__item {
+    width: 45px;
+    height: 45px;
+    line-height: 50px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 10px;
+    background-color: #f7f7f7;
+}
+
+.social-01__style-02 .social-01__item:hover {
+    background-color: #5DA2A8;
+    color: white;
+}
+.footer-social a {
+    color: #b9b9b9 !important;
+    text-decoration: underline;
+}
+.social-01__style-03 .social-01__title {
+    font-size: 16px;
+    color: #626262;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-01__style-03 .social-01__navSocial {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-size {
+    font-size: 1.3em;
+}
+
+
+.social-01, .social-01 {
+    /*float: left;*/
+    margin-bottom: 30px;
+}
+
+.social-01 + *,
+.social-01 + * {
+    clear: both;
+}
+
+@media (min-width: 768px) {
+    .social-01,
+    .social-01 {
+        position: absolute;
+        right: 4em;
+
+
+    }
+
+    .social-01 .social-01__item,
+    .social-01 .social-01__item {
+        display: block;
+        margin: 20px 10px;
+    }
+}
+
+/*
+.social-01 .color_1 {
+    color: #5DA2A8;
+}
+.social-01 .color_2 {
+    color: #54969C;
+}
+.social-01 .color_3 {
+    color: #4D8A90;
+}
+*/
