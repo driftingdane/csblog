@@ -23,10 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'Your secret key'
+# SECURITY WARNING: keep the secret key used in production secret!
+...
+RECAPTCHA_SITE_KEY = '6LeO80UcAAAAAOBL1I2WWcvSQjYvKWK-8WOvHhEX' #your reCAPTCHA SITE key
 
+RECAPTCHA_SECRET_KEY = '6LeO80UcAAAAAE7561eA4iv2h6eHaL8_djI1MOiu' #your reCAPTCHA SECRET key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
@@ -34,7 +38,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 INSTALLED_APPS = [
 	## List apps before admin for overiding django admin style CSS
 	'tinymce',
-    'fontawesome-free',
+    'fontawesome_free',
 	'blog',
 	'users',
 	'contacts',
@@ -74,6 +78,8 @@ TEMPLATES = [
 				'django.template.context_processors.request',
 				'django.contrib.auth.context_processors.auth',
 				'django.contrib.messages.context_processors.messages',
+				'contacts.context_processors.key',
+				'contacts.insert_form.contactform',
 			],
 		},
 	},
@@ -96,9 +102,9 @@ if DEBUG:
 	DATABASES = {
 		'default': {
 			'ENGINE': 'django.db.backends.mysql',
-			'NAME': '',
-			'USER': '',
-			'PASSWORD': '',
+			'NAME': 'customblog',
+			'USER': 'django',
+			'PASSWORD': 'Django76',
 			'HOST': '127.0.0.1',
 			'PORT': '3306',
 		}
@@ -222,10 +228,10 @@ TINYMCE_DEFAULT_CONFIG = {
 	],
 }
 
-# EMAIL_BACKEND = 'django.core.mail.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = 'tbhedelund@gmail.com'
+EMAIL_HOST_PASSWORD = 'Th170258'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = ''
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

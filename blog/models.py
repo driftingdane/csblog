@@ -62,7 +62,7 @@ class Post(models.Model):
 			output_size = (800, 600)
 			imag.thumbnail(output_size)
 			imag.save(self.feat_img.path)
-			
+	
 	@property
 	def thumbnail_preview(self):
 		if self.feat_img:
@@ -73,7 +73,8 @@ class Post(models.Model):
 			                           quality=100)
 			return format_html(
 				'<img src="{}" width="{}" height="{}">'.format(_thumbnail.url, _thumbnail.width, _thumbnail.height))
-		#return ""
+	
+	# return ""
 	
 	class Meta:
 		ordering = ('publish',)

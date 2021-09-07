@@ -3,7 +3,6 @@
   <component name="SshConfigs">
     <configs>
       <sshConfig authType="PASSWORD" host="165.227.137.155" id="a805274e-a21f-42b9-bec1-49612dc4dcae" port="22" customName="csblog" nameFormat="CUSTOM" username="root" />
-      <sshConfig authType="PASSWORD" host="165.227.137.155" id="5338419f-f12a-4da3-8da0-b8e71fd53d9d" port="22" customName="csblog" nameFormat="CUSTOM" username="root" />
     </configs>
   </component>
 </project>
