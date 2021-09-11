@@ -19,27 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57751f6-f181-4c50-a740-f189a6255008" name="Default Changelist" comment="added new navbar styles">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contacts/context_processors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contacts/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contacts/insert_form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+    <list default="true" id="d57751f6-f181-4c50-a740-f189a6255008" name="Default Changelist" comment="Created content_processors for contact form and capcha token - added google capcha v3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contacts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contacts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/csblog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/csblog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/inc/_contact_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inc/_contact_modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +192,12 @@
       <workItem from="1630828110966" duration="2581000" />
       <workItem from="1630913107886" duration="10041000" />
       <workItem from="1630946391755" duration="5510000" />
-      <workItem from="1630998053913" duration="9039000" />
+      <workItem from="1630998053913" duration="9110000" />
+      <workItem from="1631078726379" duration="4108000" />
+      <workItem from="1631177318458" duration="9383000" />
+      <workItem from="1631256662776" duration="5818000" />
+      <workItem from="1631292623057" duration="5295000" />
+      <workItem from="1631345882522" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="added remote url">
       <created>1617624515103</created>
@@ -403,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618671721336</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Created content_processors for contact form and capcha token - added google capcha v3">
+      <created>1631020774138</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1631020774138</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +427,8 @@
     <MESSAGE value="added remote url" />
     <MESSAGE value="Change debug to false" />
     <MESSAGE value="added new navbar styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new navbar styles" />
+    <MESSAGE value="Created content_processors for contact form and capcha token - added google capcha v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created content_processors for contact form and capcha token - added google capcha v3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="175" y="0" key="#Deployment" timestamp="1630322623989">
@@ -456,22 +456,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="0" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623831913718" />
-    <state width="1311" height="141" key="GridCell.Tab.0.bottom" timestamp="1631020327257">
+    <state width="1311" height="177" key="GridCell.Tab.0.bottom" timestamp="1631298418100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="141" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1631020327257" />
-    <state width="1311" height="141" key="GridCell.Tab.0.center" timestamp="1631020327257">
+    <state width="1311" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1631298418100" />
+    <state width="1311" height="177" key="GridCell.Tab.0.center" timestamp="1631298418100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="141" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1631020327257" />
-    <state width="1311" height="141" key="GridCell.Tab.0.left" timestamp="1631020327257">
+    <state width="1311" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1631298418100" />
+    <state width="1311" height="177" key="GridCell.Tab.0.left" timestamp="1631298418100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="141" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1631020327257" />
-    <state width="1311" height="141" key="GridCell.Tab.0.right" timestamp="1631020327257">
+    <state width="1311" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1631298418100" />
+    <state width="1311" height="177" key="GridCell.Tab.0.right" timestamp="1631298418100">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="141" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1631020327257" />
+    <state width="1311" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1631298418100" />
     <state width="274" height="594" key="HiddenNamespacesPopup" timestamp="1630562325541">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

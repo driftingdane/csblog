@@ -1,8 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html lang="en" class="ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html lang="en" class="ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html lang="en" class="ie8 oldie"> <![endif]-->
+<!--[if lt IE 7]>
+<html lang="en" class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="ie8 oldie"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en" class="no-js h-100">
 <!--<![endif]-->
@@ -19,7 +22,7 @@
     <!-- Enable Standards mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="canonical" href="{{request.build_absolute_uri }}">
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cs Blog {% block title %} {% endblock %}</title>
     <!-- Apple devices -->
@@ -36,21 +39,21 @@
     <!-- 32x32 or 64x64 -->
     <link rel="icon" href="{% static "img/logo.png" %}" type="image/png">
     {% block head %}
-    <meta name="author" content="Tommy Hedelund">
-    <meta name="description" content="Vi vil have Danmark tilbage, som i de gode gamle dage. Something is rotten In the State of Denmark.
+        <meta name="author" content="Tommy Hedelund">
+        <meta name="description" content="Vi vil have Danmark tilbage, som i de gode gamle dage. Something is rotten In the State of Denmark.
     Vi mangler varme, venlighed, hjælpsomhed. Talerør for medgangsbevægelsen.">
-    <meta name="keywords" content="">
-    <meta name="copyright" content="{{ request.get_host }}">
-    <!-- Facebook OpenG -->
-    <meta property="fb:admins" content="10151007456874342">
-    <meta property="fb:app_id" content="">
-    <meta property="og:type" content="website">
+        <meta name="keywords" content="">
+        <meta name="copyright" content="{{ request.get_host }}">
+        <!-- Facebook OpenG -->
+        <meta property="fb:admins" content="10151007456874342">
+        <meta property="fb:app_id" content="">
+        <meta property="og:type" content="website">
 
-    <meta property="og:title" content="WakeUpDenmark | Forsiden">
-    <meta property="og:site_name" content="{{ request.get_host }}">
-    <meta property="og:url" content="{{request.build_absolute_uri }}">
-    <meta property="og:image" content="{% static "img/logo.png" %}" type="image/png">
-    <meta property="og:description" content="">
+        <meta property="og:title" content="WakeUpDenmark | Forsiden">
+        <meta property="og:site_name" content="{{ request.get_host }}">
+        <meta property="og:url" content="{{ request.build_absolute_uri }}">
+        <meta property="og:image" content="{% static "img/logo.png" %}" type="image/png">
+        <meta property="og:description" content="">
     {% endblock head %}
     <!-- regular styles -->
 
@@ -76,8 +79,9 @@
     <![endif]-->
 
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="mznVGQiH"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"
+            nonce="mznVGQiH"></script>
 </head>
 
 <body id="top" class="d-flex flex-column h-100">
@@ -86,11 +90,11 @@
 {% include 'inc/_navbar.html' %}
 
 <main class="flex-shrink-0 mt-5">
-   {% block content %}
+    {% block content %}
 
-    <!-- HTML CONTENT -->
+        <!-- HTML CONTENT -->
 
-   {% endblock content %}
+    {% endblock content %}
 </main>
 
 {% include 'inc/_contact_modal.html' %}
@@ -98,32 +102,39 @@
 <!-- Footer -->
 {% include 'inc/_footer.html' %}
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 <script src="{% static "js/fitvids.js" %}" type="text/javascript"></script>
 <script src="{% static "js/main.js" %}" type="text/javascript"></script>
-      <!-- reCAPTCHA API -->
-    <script src='https://www.google.com/recaptcha/api.js?render={{site_key}}'></script>
+<!-- reCAPTCHA API -->
+<script src='https://www.google.com/recaptcha/api.js?render={{ site_key }}'></script>
 
-  <script>
-          // 3
-          grecaptcha.ready(function() {
-              // 4
-              $('#contactform').submit(function(e){
-                  var form = this;
-                  // 5
-                  e.preventDefault()
-                  grecaptcha.execute('{{site_key}}', {action: 'contactform'}).then(function(token) {
-                      // 6
-                      $('#recaptcha').val(token)
-                      // 7
-                      form.submit()
-                  });
-              })
+<script>
+    // 3
+    grecaptcha.ready(function () {
+        // 4
+        $('#contactform').submit(function (e) {
+            var form = this;
+            // 5
+            e.preventDefault()
+            grecaptcha.execute('{{site_key}}', {action: 'contactform'}).then(function (token) {
+                // 6
+                $('#recaptcha').val(token)
+                // 7
+                form.submit()
 
-          });
-  </script>
+            });
 
+        })
+        //// if errors open modal
+        {% if form.errors %}
+            $("#inquiryModal").modal("show");
+        {% endif %}
+    });
+</script>
 
 </body>
 </html>

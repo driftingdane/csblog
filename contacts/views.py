@@ -9,8 +9,7 @@ from .forms import ContactForm
 
 
 def contact(request):
-	
-	global name, email, message
+
 	if request.method == 'POST':
 
 		form = ContactForm(request.POST)
@@ -34,24 +33,26 @@ def contact(request):
 		# Validate the form: the captcha field will automatically
 		# check the input
 		if form.is_valid():
-			name = request.POST['name']
-			email = request.POST['email']
-			message = request.POST['message']
-		save_contact = Contact(name=name, email=email, message=message)
+			
+			name = form.cleaned_data['name']
+			email = form.cleaned_data['email']
+			message = form.cleaned_data['message']
+			
+			save_contact = Contact(name=name, email=email, message=message)
 
-		save_contact.save()
+			save_contact.save()
 
-		# Send mail
-		send_mail(
-			'Hello Admin. You have new mail',
-			message,
-			email,
-			['driftingdane@gmail.com'],
-			fail_silently=False
-		)
+			# Send mail
+			send_mail(
+				'Hello Admin. You have new mail',
+				message,
+				email,
+				['driftingdane@gmail.com'],
+				fail_silently=False
+			)
 
-		messages.success(request, 'Your message was sent.')
-		return redirect('blog:index')
+			messages.success(request, 'Your message was sent.')
+			return redirect('blog:index')
 	else:
 		form = ContactForm()
 	return render(request, 'base.html', {'form': form})

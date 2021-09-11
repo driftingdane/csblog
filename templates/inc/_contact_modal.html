@@ -1,43 +1,31 @@
-  <!-- Inquiry Modal -->
+<!-- Inquiry Modal -->
 <div class="modal fade" tabindex="-1" id="inquiryModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-       <h3 class="modal-title text-black text-center" id="inquiryModalLabel">Kontakt mig her</h3>
-       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-        <div class="modal-body">
-             <h4 class="text-black text-center">Eller på <a title="Tommy Hedelund - Facebook" target="_blank" href="https://www.facebook.com/tommy.hedelund"><i class="fab fa-facebook-square fa-fw fa-1x mt-2"></i></a></h4>
-            <form id="contactform" action="{% url 'contact' %}" method="post">
-                {% csrf_token %}
-            <!-- reCAPTCHA input -->
-            <input type="hidden" id="recaptcha" name="g-recaptcha-response">
-            <div class="form-group">
-              <label for="name" class="col-form-label">Navn:</label>
-                <input type="text" id="name" name="name" class="form-control"
-                       value="{{form.name}}" required>
-            </div>
-            <div class="form-group">
-              <label for="email" class="col-form-label">Email:</label>
-                <input type="email" id="email" name="email" class="form-control"
-                       value="{{form.email}}" required>
-            </div>
-            <div class="form-group">
-              <label for="message" class="col-form-label">Besked:</label>
-              <textarea name="message" id="message" class="form-control"></textarea>
-                {{form.message}}
-            </div>
-            <div class="form-group">
-            {{ request.build_absolute_uri }}
-            </div>
-            <hr>
-            <div class="d-grid gap-2 col-6 mx-auto">
-             <input type="submit" value="Send" class="btn btn-outline-success">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-black text-center" id="inquiryModalLabel">Kontakt mig her</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-          </form>
+            <div class="modal-body">
+                <h4 class="text-black text-center">Eller på <a title="Tommy Hedelund - Facebook" target="_blank"
+                                                               href="https://www.facebook.com/tommy.hedelund"><i
+                        class="fab fa-facebook-square fa-fw fa-1x mt-2"></i></a></h4>
+                <form id="contactform" action="{% url 'contact' %}" method="post" novalidate>
+                    {% csrf_token %}
+                    <!-- reCAPTCHA input -->
+                    <input type="hidden" id="recaptcha" name="g-recaptcha-response">
+
+                    {{ form }}
+
+                    <hr>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <input type="submit" value="Send" class="btn btn-outline-success">
+                    </div>
+
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+
