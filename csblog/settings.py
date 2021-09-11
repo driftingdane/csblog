@@ -24,13 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'Your secret key'
 # SECURITY WARNING: keep the secret key used in production secret!
-...
-RECAPTCHA_SITE_KEY = '6LeO80UcAAAAAOBL1I2WWcvSQjYvKWK-8WOvHhEX' #your reCAPTCHA SITE key
-
-RECAPTCHA_SECRET_KEY = '6LeO80UcAAAAAE7561eA4iv2h6eHaL8_djI1MOiu' #your reCAPTCHA SECRET key
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 # Application definition
@@ -227,6 +223,11 @@ TINYMCE_DEFAULT_CONFIG = {
 		{'title': 'Responsive', 'value': 'img-fluid'}
 	],
 }
+
+RECAPTCHA_SITE_KEY = '6LeO80UcAAAAAOBL1I2WWcvSQjYvKWK-8WOvHhEX' #your reCAPTCHA SITE key
+
+RECAPTCHA_SECRET_KEY = '6LeO80UcAAAAAE7561eA4iv2h6eHaL8_djI1MOiu' #your reCAPTCHA SECRET key
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'driftingdane@gmail.com'

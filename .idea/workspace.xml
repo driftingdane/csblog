@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57751f6-f181-4c50-a740-f189a6255008" name="Default Changelist" comment="Created content_processors for contact form and capcha token - added google capcha v3">
+    <list default="true" id="d57751f6-f181-4c50-a740-f189a6255008" name="Default Changelist" comment="Replaced static form with django form with standard validation. Added error check to form submit so modal opens if validation error before saving to DB">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contacts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/csblog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/inc/_contact_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inc/_contact_modal.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +195,7 @@
       <workItem from="1631177318458" duration="9383000" />
       <workItem from="1631256662776" duration="5818000" />
       <workItem from="1631292623057" duration="5295000" />
-      <workItem from="1631345882522" duration="177000" />
+      <workItem from="1631345882522" duration="4066000" />
     </task>
     <task id="LOCAL-00001" summary="added remote url">
       <created>1617624515103</created>
@@ -402,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631020774138</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Replaced static form with django form with standard validation. Added error check to form submit so modal opens if validation error before saving to DB">
+      <created>1631346187035</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1631346187036</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +433,8 @@
     <MESSAGE value="Change debug to false" />
     <MESSAGE value="added new navbar styles" />
     <MESSAGE value="Created content_processors for contact form and capcha token - added google capcha v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created content_processors for contact form and capcha token - added google capcha v3" />
+    <MESSAGE value="Replaced static form with django form with standard validation. Added error check to form submit so modal opens if validation error before saving to DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced static form with django form with standard validation. Added error check to form submit so modal opens if validation error before saving to DB" />
   </component>
   <component name="WindowStateProjectService">
     <state x="175" y="0" key="#Deployment" timestamp="1630322623989">
@@ -456,22 +462,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="0" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623831913718" />
-    <state width="1311" height="177" key="GridCell.Tab.0.bottom" timestamp="1631298418100">
+    <state width="1311" height="177" key="GridCell.Tab.0.bottom" timestamp="1631349380878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1631298418100" />
-    <state width="1311" height="177" key="GridCell.Tab.0.center" timestamp="1631298418100">
+    <state width="1311" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1631349380878" />
+    <state width="1311" height="177" key="GridCell.Tab.0.center" timestamp="1631349380877">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1631298418100" />
-    <state width="1311" height="177" key="GridCell.Tab.0.left" timestamp="1631298418100">
+    <state width="1311" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1631349380877" />
+    <state width="1311" height="177" key="GridCell.Tab.0.left" timestamp="1631349380877">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1631298418100" />
-    <state width="1311" height="177" key="GridCell.Tab.0.right" timestamp="1631298418100">
+    <state width="1311" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1631349380877" />
+    <state width="1311" height="177" key="GridCell.Tab.0.right" timestamp="1631349380878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1631298418100" />
+    <state width="1311" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1631349380878" />
     <state width="274" height="594" key="HiddenNamespacesPopup" timestamp="1630562325541">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -488,5 +494,16 @@
     </state>
     <state x="434" y="37" width="498" height="676" key="webDeployment.PermissionsDialog.Tabs/0.0.1366.728@0.0.1366.728" timestamp="1630246720965" />
     <state x="449" y="201" key="webDeployment.PermissionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1630249720018" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/csblog/settings.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
