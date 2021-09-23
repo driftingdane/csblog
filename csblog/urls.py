@@ -24,7 +24,6 @@ urlpatterns = [
     path('', include('contacts.urls')),
     path('admin/', admin.site.urls),
     path('tinymce/', include('tinymce.urls')),
-    
 ]
 
 admin.site.index_title = "WakeUpDenmark"

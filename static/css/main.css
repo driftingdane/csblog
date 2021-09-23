@@ -11,6 +11,10 @@ video {
 
 .fa-custom-size { font-size: 1.4em;}
 
+.errorlist {
+  color: #842029;background-color: #f8d7da;border-color: #f5c2c7;
+}
+
 /* 22. social
 --------------------------------------------------------------------------------*/
 

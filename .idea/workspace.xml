@@ -19,12 +19,35 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57751f6-f181-4c50-a740-f189a6255008" name="Default Changelist" comment="Replaced static form with django form with standard validation. Added error check to form submit so modal opens if validation error before saving to DB">
+    <list default="true" id="d57751f6-f181-4c50-a740-f189a6255008" name="Default Changelist" comment="Added custom size css for icons">
+      <change afterPath="$PROJECT_DIR$/static/admin/js/fileUpload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/app_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/upload_video.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/uploader/file/change_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/0002_auto_20210324_1419.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/contacts/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/csblog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/csblog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagecontent/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagecontent/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagecontent/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagecontent/migrations/0002_auto_20210419_2027.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagecontent/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/DateTimeShortcuts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/js/RelatedObjectLookups.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/inc/_contact_modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inc/_contact_modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base_admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base_site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videocontent/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/videocontent/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videocontent/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videocontent/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/videocontent/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/videocontent/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videocontent/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/videocontent/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +60,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -60,6 +83,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -76,12 +100,14 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.project" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\PycharmProjects\csblog\contacts" />
+      <recent name="C:\Users\User\PycharmProjects\csblog\templates\admin\uploader\file" />
+      <recent name="C:\Users\User\PycharmProjects\csblog\templates\admin\uploader" />
       <recent name="C:\Users\User\PycharmProjects\csblog\static\admin\js" />
+      <recent name="C:\Users\User\PycharmProjects\csblog\contacts" />
     </key>
   </component>
   <component name="RunManager">
@@ -195,7 +221,20 @@
       <workItem from="1631177318458" duration="9383000" />
       <workItem from="1631256662776" duration="5818000" />
       <workItem from="1631292623057" duration="5295000" />
-      <workItem from="1631345882522" duration="4066000" />
+      <workItem from="1631345882522" duration="9569000" />
+      <workItem from="1631377515517" duration="11613000" />
+      <workItem from="1631512148121" duration="14341000" />
+      <workItem from="1631549720554" duration="6930000" />
+      <workItem from="1631601939644" duration="27782000" />
+      <workItem from="1631718590121" duration="6685000" />
+      <workItem from="1631771644655" duration="3500000" />
+      <workItem from="1631866715268" duration="1443000" />
+      <workItem from="1631882750381" duration="9768000" />
+      <workItem from="1632033488747" duration="11720000" />
+      <workItem from="1632203712313" duration="8710000" />
+      <workItem from="1632312554477" duration="5104000" />
+      <workItem from="1632373718267" duration="5336000" />
+      <workItem from="1632381734571" duration="5957000" />
     </task>
     <task id="LOCAL-00001" summary="added remote url">
       <created>1617624515103</created>
@@ -407,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631346187036</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Added custom size css for icons">
+      <created>1631355332252</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1631355332252</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,58 +480,66 @@
     <MESSAGE value="added new navbar styles" />
     <MESSAGE value="Created content_processors for contact form and capcha token - added google capcha v3" />
     <MESSAGE value="Replaced static form with django form with standard validation. Added error check to form submit so modal opens if validation error before saving to DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replaced static form with django form with standard validation. Added error check to form submit so modal opens if validation error before saving to DB" />
+    <MESSAGE value="Added custom size css for icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added custom size css for icons" />
   </component>
   <component name="WindowStateProjectService">
     <state x="175" y="0" key="#Deployment" timestamp="1630322623989">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="175" y="0" key="#Deployment/0.0.1366.728@0.0.1366.728" timestamp="1630322623989" />
+    <state x="540" y="194" key="#Notifications" timestamp="1632117530489">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="540" y="194" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1632117530489" />
     <state x="155" y="0" key="#SSH_Configurations" timestamp="1630322622390">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="155" y="0" key="#SSH_Configurations/0.0.1366.728@0.0.1366.728" timestamp="1630322622390" />
-    <state x="275" y="13" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1630180283033">
+    <state x="267" y="13" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1631883081470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="13" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1630180283033" />
-    <state x="360" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630430466616">
+    <state x="267" y="13" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1631883081470" />
+    <state x="360" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1631553770365">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="360" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1630430466616" />
+    <state x="360" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1631553770365" />
     <state x="528" y="236" key="Github.ShareDialog" timestamp="1623831889998">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="528" y="236" key="Github.ShareDialog/-1920.-312.1920.1040/0.0.1366.728@0.0.1366.728" timestamp="1623503423825" />
     <state x="528" y="236" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1623831889998" />
     <state x="363" y="0" key="Github.UntrackedFilesDialog" timestamp="1623831913718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="0" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1623831913718" />
-    <state width="1311" height="177" key="GridCell.Tab.0.bottom" timestamp="1631349380878">
+    <state width="1311" height="157" key="GridCell.Tab.0.bottom" timestamp="1632389263250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="177" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1631349380878" />
-    <state width="1311" height="177" key="GridCell.Tab.0.center" timestamp="1631349380877">
+    <state width="1311" height="157" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632389263250" />
+    <state width="1865" height="203" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632237517756" />
+    <state width="1311" height="157" key="GridCell.Tab.0.center" timestamp="1632389263250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="177" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1631349380877" />
-    <state width="1311" height="177" key="GridCell.Tab.0.left" timestamp="1631349380877">
+    <state width="1311" height="157" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1632389263250" />
+    <state width="1865" height="203" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632237517756" />
+    <state width="1311" height="157" key="GridCell.Tab.0.left" timestamp="1632389263250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="177" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1631349380877" />
-    <state width="1311" height="177" key="GridCell.Tab.0.right" timestamp="1631349380878">
+    <state width="1311" height="157" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1632389263250" />
+    <state width="1865" height="203" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632237517756" />
+    <state width="1311" height="157" key="GridCell.Tab.0.right" timestamp="1632389263250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1311" height="177" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1631349380878" />
+    <state width="1311" height="157" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1632389263250" />
+    <state width="1865" height="203" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632237517756" />
     <state width="274" height="594" key="HiddenNamespacesPopup" timestamp="1630562325541">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="274" height="594" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1630562325541" />
-    <state x="59" y="0" key="SettingsEditor" timestamp="1623831788759">
+    <state x="59" y="0" key="SettingsEditor" timestamp="1631883005153">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="59" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1623831788759" />
+    <state x="59" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1631883005153" />
     <state x="449" y="201" key="webDeployment.PermissionsDialog" timestamp="1630249720018">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

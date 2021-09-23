@@ -34,13 +34,14 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 INSTALLED_APPS = [
 	## List apps before admin for overiding django admin style CSS
 	'tinymce',
-    'fontawesome_free',
+	'fontawesome_free',
 	'blog',
 	'users',
 	'contacts',
-    'gunicorn',
+	'gunicorn',
 	'imagecontent',
 	'videocontent',
+	'uploader',
 	'sorl.thumbnail',
 	'django.contrib.admin',
 	'django.contrib.auth',
@@ -49,7 +50,10 @@ INSTALLED_APPS = [
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'django.contrib.humanize',
+	'django.contrib.sites',
 ]
+
+SITE_ID = 2
 
 MIDDLEWARE = [
 	'django.middleware.security.SecurityMiddleware',
@@ -117,7 +121,6 @@ else:
 		}
 	}
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -182,7 +185,7 @@ TINYMCE_DEFAULT_CONFIG = {
 	'cleanup_on_startup': False,
 	'custom_undo_redo_levels': 20,
 	'selector': '.tinymce',
-    'media_dimensions': False,
+	'media_dimensions': False,
 	'height': '400',
 	'theme': 'silver',
 	'force_br_newlines': True,
@@ -213,9 +216,9 @@ TINYMCE_DEFAULT_CONFIG = {
             | link image media | codesample |
             ''',
 	# 'toolbar2': '''
-    #         visualblocks visualchars |
-    #         charmap hr pagebreak nonbreaking anchor |  code |
-    #         ''',
+	#         visualblocks visualchars |
+	#         charmap hr pagebreak nonbreaking anchor |  code |
+	#         ''',
 	'contextmenu': 'formats | link image',
 	'menubar': True,
 	'statusbar': True,
@@ -224,9 +227,9 @@ TINYMCE_DEFAULT_CONFIG = {
 	],
 }
 
-RECAPTCHA_SITE_KEY = '6LeO80UcAAAAAOBL1I2WWcvSQjYvKWK-8WOvHhEX' #your reCAPTCHA SITE key
+RECAPTCHA_SITE_KEY = '6LeO80UcAAAAAOBL1I2WWcvSQjYvKWK-8WOvHhEX'  # your reCAPTCHA SITE key
 
-RECAPTCHA_SECRET_KEY = '6LeO80UcAAAAAE7561eA4iv2h6eHaL8_djI1MOiu' #your reCAPTCHA SECRET key
+RECAPTCHA_SECRET_KEY = '6LeO80UcAAAAAE7561eA4iv2h6eHaL8_djI1MOiu'  # your reCAPTCHA SECRET key
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
 EMAIL_HOST = 'smtp.gmail.com'
