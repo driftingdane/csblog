@@ -102,9 +102,9 @@ if DEBUG:
 	DATABASES = {
 		'default': {
 			'ENGINE': 'django.db.backends.mysql',
-			'NAME': 'customblog',
-			'USER': 'django',
-			'PASSWORD': 'Django76',
+			'NAME': '',
+			'USER': '',
+			'PASSWORD': '',
 			'HOST': '127.0.0.1',
 			'PORT': '3306',
 		}
@@ -237,5 +237,5 @@ EMAIL_HOST_USER = 'driftingdane@gmail.com'
 EMAIL_HOST_PASSWORD = 'yhshkjxxqoamqpgx'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
