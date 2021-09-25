@@ -89,9 +89,10 @@
 
 </div>
 
-
     <div class="container">
-    <div class="col-sm-6 mx-auto">
+    <div class="col-sm-6 mx-auto position-relative">
+          <span class="position-absolute top-0 start-100 translate-middle p-2 border border-light rounded-circle">
+          {{ original.title }}</span>
         <video width="360" controls preload="auto">
             <source type="video/mp4" src="{% get_media_prefix %}videos/{{ original }}">
         </video>

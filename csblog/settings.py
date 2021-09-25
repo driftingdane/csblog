@@ -102,9 +102,9 @@ if DEBUG:
 	DATABASES = {
 		'default': {
 			'ENGINE': 'django.db.backends.mysql',
-			'NAME': '',
-			'USER': '',
-			'PASSWORD': '',
+			'NAME': 'customblog',
+			'USER': 'django',
+			'PASSWORD': 'Django76',
 			'HOST': '127.0.0.1',
 			'PORT': '3306',
 		}
