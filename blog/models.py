@@ -56,25 +56,27 @@ class Post(models.Model):
 	## Resize and save the image
 	def save(self, *args, **kwargs):
 		super(Post, self).save(*args, **kwargs)
-		self.slug = slugify(self.title)
-		imag = Image.open(self.feat_img.path)
-		if imag.width > 800 or imag.height > 600:
-			output_size = (800, 600)
-			imag.thumbnail(output_size)
-			imag.save(self.feat_img.path)
+		if self.feat_img:
+			imag = Image.open(self.feat_img.path)
+			if imag.width > 800 or imag.height > 600:
+				size_big = (800, 600)
+				imag.thumbnail(size_big)
+				imag.save(self.feat_img.path)
 	
 	@property
 	def thumbnail_preview(self):
 		if self.feat_img:
 			_thumbnail = get_thumbnail(self.feat_img,
-			                           '250x150',
+			                           '200x150',
 			                           upscale=False,
 			                           crop=False,
 			                           quality=100)
 			return format_html(
 				'<img src="{}" width="{}" height="{}">'.format(_thumbnail.url, _thumbnail.width, _thumbnail.height))
-	
-	# return ""
+		# return ""
+		
+		else:
+			pass
 	
 	class Meta:
 		ordering = ('publish',)
