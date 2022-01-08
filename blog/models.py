@@ -37,7 +37,7 @@ class Post(models.Model):
 	
 	title = models.CharField(max_length=250)
 	category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name="category")
-	excerpt = models.TextField(null=True)
+	excerpt = models.TextField(blank=True, null=True)
 	feat_img = models.ImageField(upload_to="post_img/",
 	                             validators=[validate_image_file_extension],
 	                             help_text=('Only jpg/jpeg files are allowed'),

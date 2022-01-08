@@ -152,6 +152,11 @@
                           } else {
                               // upload complete
                               $('.textbox').text(res.data);
+                              // data.redirect contains the string URL to redirect to
+                              let delay = 2000;
+                              let url = 'http://127.0.0.1:8000/admin/uploader/file/';
+                              setTimeout(function(){ window.location = url; }, delay);
+                              {#window.location.href = 'http://127.0.0.1:8000/admin/uploader/file/';#}
 
 
                           }
