@@ -18,7 +18,7 @@ class ImageAdmin(admin.ModelAdmin):
 	def copy_url(self, obj):
 		h = Site.objects.get_current().domain
 		return format_html(
-			'<a href="#" class="btn btn-outline-info btn-sm" data-clipboard-action="copy" data-bs-toggle="tooltip" title="Copied!" data-clipboard-text="{site}/{url}">Copy</a>'.format(
+			'<a href="#" class="btn btn-outline-info btn-sm" data-clipboard-action="copy" data-bs-toggle="tooltip" title="Copied!" data-clipboard-text="https://{site}/{url}">Copy</a>'.format(
 				url=obj.feat_img,
 				site=h,
 			))

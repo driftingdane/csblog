@@ -4,7 +4,7 @@ from django.conf import settings
 from django.urls import reverse
 from tinymce.models import HTMLField
 from django.core.validators import validate_image_file_extension
-from PIL import Image
+from PIL import Image, ExifTags
 from sorl.thumbnail import get_thumbnail
 from django.utils.html import format_html
 from django.utils.text import slugify
@@ -58,6 +58,21 @@ class Post(models.Model):
 		super(Post, self).save(*args, **kwargs)
 		if self.feat_img:
 			imag = Image.open(self.feat_img.path)
+			
+			for orientation in ExifTags.TAGS.keys():
+				if ExifTags.TAGS[orientation] == 'Orientation':
+					break
+			
+			exif = imag._getexif()
+			
+			if exif[orientation] == 3:
+				imag = imag.rotate(180, expand=True)
+			elif exif[orientation] == 6:
+				imag = imag.rotate(270, expand=True)
+			elif exif[orientation] == 8:
+				imag = imag.rotate(90, expand=True)
+				
+				
 			if imag.width > 800 or imag.height > 600:
 				size_big = (800, 600)
 				imag.thumbnail(size_big)

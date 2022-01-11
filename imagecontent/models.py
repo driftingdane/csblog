@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.conf import settings
 from django.core.validators import validate_image_file_extension
-from PIL import Image
+from PIL import Image, ExifTags
 from sorl.thumbnail import get_thumbnail
 from django.utils.html import format_html
 
@@ -20,6 +20,20 @@ class UploadImage(models.Model):
 	def save(self, *args, **kwargs):
 		super(UploadImage, self).save(*args, **kwargs)
 		imag = Image.open(self.feat_img.path)
+		
+		for orientation in ExifTags.TAGS.keys():
+			if ExifTags.TAGS[orientation] == 'Orientation':
+				break
+		
+		exif = imag._getexif()
+		
+		if exif[orientation] == 3:
+			imag = imag.rotate(180, expand=True)
+		elif exif[orientation] == 6:
+			imag = imag.rotate(270, expand=True)
+		elif exif[orientation] == 8:
+			imag = imag.rotate(90, expand=True)
+			
 		if imag.width > 800 or imag.height > 600:
 			size_big = (800, 600)
 			imag.thumbnail(size_big)

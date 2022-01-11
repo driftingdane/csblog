@@ -23,9 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imagecontent/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagecontent/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/app_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/upload_video.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/upload_video.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/uploader/file/change_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/uploader/file/change_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagecontent/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagecontent/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,6 +245,8 @@
       <workItem from="1640099766986" duration="172000" />
       <workItem from="1641410967468" duration="12053000" />
       <workItem from="1641634667127" duration="612000" />
+      <workItem from="1641656330243" duration="982000" />
+      <workItem from="1641907897320" duration="8669000" />
     </task>
     <task id="LOCAL-00001" summary="added remote url">
       <created>1617624515103</created>
@@ -493,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632591947044</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added group rights and fixed custom add link and image upload issue">
+      <created>1641656447257</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1641656447257</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +530,8 @@
     <MESSAGE value="Added custom size css for icons" />
     <MESSAGE value="Added Django Sites model and updated copy_url function - created custom add_view function to redirect to custom add page" />
     <MESSAGE value="Added frontend file validation to admin upload_video.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added frontend file validation to admin upload_video.html" />
+    <MESSAGE value="Added group rights and fixed custom add link and image upload issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added group rights and fixed custom add link and image upload issue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="0" key="#Deployment" timestamp="1639735094712">
@@ -534,29 +542,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="604" y="31" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1639735052799" />
-    <state width="1311" height="203" key="GridCell.Tab.0.bottom" timestamp="1641425961659">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1481" height="328" key="GridCell.Tab.0.bottom" timestamp="1641921006601">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1311" height="203" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1641425961659" />
-    <state width="1481" height="240" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1633264031957" />
+    <state width="1481" height="328" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1641921006601" />
     <state width="1311" height="203" key="GridCell.Tab.0.bottom/1366.-305.1280.693/0.0.1366.728@0.0.1366.728" timestamp="1641415684710" />
-    <state width="1311" height="203" key="GridCell.Tab.0.center" timestamp="1641425961659">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1481" height="328" key="GridCell.Tab.0.center" timestamp="1641921006601">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1311" height="203" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1641425961659" />
-    <state width="1481" height="240" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1633264031957" />
+    <state width="1481" height="328" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1641921006601" />
     <state width="1311" height="203" key="GridCell.Tab.0.center/1366.-305.1280.693/0.0.1366.728@0.0.1366.728" timestamp="1641415684710" />
-    <state width="1311" height="203" key="GridCell.Tab.0.left" timestamp="1641425961659">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1481" height="328" key="GridCell.Tab.0.left" timestamp="1641921006601">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1311" height="203" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1641425961659" />
-    <state width="1481" height="240" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1633264031957" />
+    <state width="1481" height="328" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1641921006601" />
     <state width="1311" height="203" key="GridCell.Tab.0.left/1366.-305.1280.693/0.0.1366.728@0.0.1366.728" timestamp="1641415684710" />
-    <state width="1311" height="203" key="GridCell.Tab.0.right" timestamp="1641425961659">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1481" height="328" key="GridCell.Tab.0.right" timestamp="1641921006601">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1311" height="203" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1641425961659" />
-    <state width="1481" height="240" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1633264031957" />
+    <state width="1481" height="328" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1641921006601" />
     <state width="1311" height="203" key="GridCell.Tab.0.right/1366.-305.1280.693/0.0.1366.728@0.0.1366.728" timestamp="1641415684710" />
     <state width="1311" height="215" key="GridCell.Tab.1.bottom" timestamp="1641425961285">
       <screen x="0" y="0" width="1366" height="728" />
@@ -582,9 +590,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="309" height="673" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1639734256737" />
-    <state x="261" y="79" key="Vcs.Push.Dialog.v2" timestamp="1636399204205">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="232" y="62" key="Vcs.Push.Dialog.v2" timestamp="1641656469678">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="232" y="62" key="Vcs.Push.Dialog.v2/-1920.-313.1280.693/0.0.1366.728@0.0.1366.728" timestamp="1641656469678" />
     <state x="261" y="79" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1636399204205" />
     <state x="521" y="303" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1636399191865">
       <screen x="0" y="0" width="1536" height="824" />
